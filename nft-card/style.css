@@ -127,7 +127,11 @@ img {
   font-size: 16px;
 }
 
-.icons p:nth-child(2) {
+.clock-text {
+  color: hsl(215, 51%, 70%);
+}
+
+.eth-text {
   color: hsl(178, 100%, 50%);
 }
 
