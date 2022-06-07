@@ -54,7 +54,7 @@ img {
 }
 /* Card Image */
 .featured-image-container {
-  background-image: url(/images/image-equilibrium.jpg);
+  background-image: url(./images/image-equilibrium.jpg);
   background-size: cover;
   width: 100%;
   height: 300px;
