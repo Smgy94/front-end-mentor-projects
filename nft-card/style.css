@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* CSS Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Outfit";
+  font-size: 18px;
+  background-color: var(--very-dark-blue-main);
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.color-overlay {
+  background-color: violet;
+  z-index: 1000;
+  /* height: auto;
+  width: 100%; */
+}
+
+/* Grid Container */
+.grid-container {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+/* Card */
+.card {
+  border-radius: 10px;
+  height: 600px;
+  width: 22rem;
+  background: var(--very-dark-blue-card);
+  padding: 25px;
+}
+/* Card Image */
+.featured-image-container {
+  background-image: url(/images/image-equilibrium.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 7px;
+  position: relative;
+}
+
+/* Card Image Overlay */
+.color-overlay {
+  position: absolute;
+  background-color: hsl(178, 100%, 50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  opacity: 0;
+  background-image: url(/images/icon-view.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Card Image Overlay Hover */
+.color-overlay:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Card Title */
+.card__title {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 22px;
+  margin: 20px 0 20px 0;
+}
+
+.card__title:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+/* Card  Text */
+.card__paragraph {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.card__text {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+}
+
+/* Card Icons */
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons-flex {
+  display: flex;
+}
+
+.icons img {
+  width: auto;
+  height: auto;
+}
+
+.icons p {
+  font-size: 16px;
+}
+
+.icons p:nth-child(2) {
+  color: hsl(178, 100%, 50%);
+}
+
+hr {
+  margin-top: 20px;
+  border: 1px solid grey;
+  opacity: 50%;
+}
+
+/* attribution */
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  color: hsl(215, 51%, 70%);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+}
+.attribution a:hover {
+  color: hsl(178, 100%, 50%);
+  font-size: 15px;
+}
+
+.attribution-logo {
+  width: 12%;
+  height: 12%;
+  background-color: hsl(215, 51%, 70%);
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 20px;
+}
