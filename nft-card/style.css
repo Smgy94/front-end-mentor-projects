@@ -65,7 +65,7 @@ img {
 /* Card Image Overlay */
 .color-overlay {
   position: absolute;
-  background-color: hsl(178, 100%, 50%);
+  background-color: hsla(178, 100%, 50%, 0.5);
   top: 0;
   left: 0;
   width: 100%;
@@ -79,7 +79,7 @@ img {
 
 /* Card Image Overlay Hover */
 .color-overlay:hover {
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
   transition: 0.5s;
 }
