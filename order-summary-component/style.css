@@ -70,18 +70,18 @@ h2 {
   width: 80%;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
-.annual-plan-text {
+.annual-plan-price {
   opacity: 0.5;
 }
 
-.icon {
-  width: 40%;
-  height: auto;
+.annual-plan-text {
+  grid-column: 2/5;
 }
 
 h3 {
@@ -95,6 +95,7 @@ h3 {
   font-size: 14px;
   font-weight: 900;
   cursor: pointer;
+  grid-column-start: 5;
 }
 
 .change:hover {
