@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-p: hsla(0, 0%, 100%, 0.581);
+  --very-light-grey: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+/* Grid Container */
+.grid-container {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.1fr));
+}
+
+/* Icons */
+
+.icon {
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.card {
+  display: grid;
+  height: 32rem;
+  padding: 3rem;
+}
+
+.card-1 {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+.card-2 {
+  background-color: var(--dark-cyan);
+}
+.card-3 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+/* Card Text Style */
+
+h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display";
+  color: var(--very-light-grey);
+}
+
+p {
+  color: var(--transparent-white-p);
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+/* Button Style */
+button {
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  width: 70%;
+  height: 50px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+button p {
+  color: black;
+  font-weight: bolder;
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+  color: black;
+  margin: 0;
+}
+
+.btn-1 {
+  color: var(--bright-orange);
+}
+.btn-2 {
+  color: var(--dark-cyan);
+}
+.btn-2 {
+  color: var(--very-dark-cyan);
+}
+
+button:hover {
+  background: none;
+  border: 1px solid white;
+  color: white;
+}
+
+button *:hover {
+  color: white;
+}
+
+/* Mobile View */
+
+@media (max-width: 425px) {
+  .grid-container {
+    border: 3px solid red;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 100%;
+  }
+  .card {
+    height: 30rem;
+    width: 20rem;
+    border-radius: none;
+  }
+  .card-1 {
+    border-radius: 10px 10px 0 0;
+    margin-top: 100px;
+  }
+
+  .card-3 {
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 100px;
+  }
+}
