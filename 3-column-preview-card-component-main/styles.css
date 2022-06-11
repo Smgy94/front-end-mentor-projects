@@ -115,7 +115,6 @@ button *:hover {
 
 @media (max-width: 425px) {
   .grid-container {
-    border: 3px solid red;
     grid-template-columns: 1fr;
     justify-items: center;
     height: 100%;
