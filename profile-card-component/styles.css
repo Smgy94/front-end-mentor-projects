@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+}
+/* Grid Container */
+.grid-container {
+  background-color: var(--dark-cyan);
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+}
+/* Card Styles */
+.card {
+  height: 28rem;
+  width: 27rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+/* Top of Card Background Pattern */
+.top-section {
+  border-radius: 1rem 1rem 0 0;
+  background-color: red;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-size: cover;
+  height: 11rem;
+}
+/* Card Profile Image */
+.profile-image {
+  height: 7rem;
+  width: 7rem;
+  background-image: url(./images/image-victor.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: -3.5rem;
+  left: 10rem;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+/* Card Text */
+.card-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -2rem;
+  color: var(--very-dark-desaturated-blue);
+  font-size: 14px;
+}
+
+span {
+  font-size: 21px;
+  color: var(--dark-grayish-blue);
+}
+
+.card-text > p {
+  margin-top: 0.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+hr {
+  opacity: 0.5;
+  margin-top: 2rem;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.stats-section p {
+  color: var(--dark-grayish-blue);
+  margin-top: 0.4rem;
+  font-size: 15px;
+}
+
+.stats-section h3 {
+  color: var(--very-dark-desaturated-blue);
+}
+
+/* Mobile View */
+
+@media (max-width: 400px) {
+  .card {
+    height: 27rem;
+    width: 21rem;
+    background-color: white;
+    border-radius: 1rem;
+  }
+
+  /* Mobile Card Profile Image */
+  .profile-image {
+    top: -3.5rem;
+    left: 7rem;
+  }
+
+  /* Stats Section */
+  .stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .stats-section p {
+    color: var(--dark-grayish-blue);
+    margin-top: 0.4rem;
+    font-size: 15px;
+  }
+}
