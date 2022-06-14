@@ -16,10 +16,14 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
+  background-color: var(--dark-cyan);
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 }
 /* Grid Container */
 .grid-container {
-  background-color: var(--dark-cyan);
   display: grid;
   height: 100vh;
   justify-content: center;
@@ -102,6 +106,12 @@ hr {
 /* Mobile View */
 
 @media (max-width: 400px) {
+  body {
+    background-image: url(./images/bg-pattern-top.svg),
+      url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 38vw bottom 50vh, left 38vw top 50vh;
+  }
   .card {
     height: 27rem;
     width: 21rem;
