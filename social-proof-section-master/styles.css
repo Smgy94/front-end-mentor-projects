@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light--grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  max-width: 75vw;
+  margin: 10vh auto;
+  line-height: 1.5;
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 0vw left 0vh, bottom 0vw right 0vh;
+}
+/* Grid Container Areas  */
+.grid-container {
+  height: 80vh;
+  display: grid;
+  row-gap: 30px;
+  grid-template-areas:
+    "intro-section reviews-section reviews-section"
+    "card-section card-section card-section";
+}
+
+.intro-section {
+  grid-area: intro-section;
+  display: grid;
+  align-items: center;
+}
+
+.reviews-section {
+  grid-area: reviews-section;
+}
+
+.card-section {
+  grid-area: card-section;
+}
+
+/*  Intro Section */
+.intro-title {
+  color: var(--very-dark-magenta);
+  font-size: 60px;
+  width: 80%;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.intro-text {
+  color: var(--dark-grayish-magenta);
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+/* Reviews Section */
+.reviews-section {
+  display: grid;
+  align-content: center;
+}
+
+.review {
+  background-color: var(--light--grayish-magenta);
+  height: 3.5rem;
+  width: 65%;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.review p {
+  color: var(--very-dark-magenta);
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.star {
+  margin-right: 8px;
+}
+
+/* Reviews Positioning */
+
+.review:nth-child(1) {
+  margin-top: -25px;
+  margin-right: 80px;
+}
+.review:nth-child(2) {
+  margin-top: 25px;
+  margin-right: 40px;
+}
+.review:nth-child(3) {
+  margin-top: 25px;
+}
+
+/* Purple Card Styles  */
+
+.card-section {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.card {
+  background-color: var(--very-dark-magenta);
+  height: 250px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.card h3,
+p {
+  color: var(--white);
+}
+
+.card P {
+  margin-top: 20px;
+}
+
+.card h4 {
+  color: var(--soft-pink);
+  margin-top: -4px;
+}
+
+.card-intro {
+  display: flex;
+}
+
+/* Cards Positioning */
+
+.card-1 {
+  align-self: flex-start;
+  margin-top: 50px;
+}
+.card-3 {
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
+
+/* Mobile View */
+
+@media (max-width: 450px) {
+  body {
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+    max-width: 90vw;
+    line-height: 1.5;
+    background-image: url(./images/bg-pattern-top-mobile.svg),
+      url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 0vw left 0vh, top 1200px right 0px;
+  }
+  .grid-container {
+    height: 100vh;
+    display: grid;
+    row-gap: 30px;
+    grid-template-areas:
+      "intro-section"
+      "reviews-section"
+      "card-section";
+    /* background-color: red; */
+  }
+
+  /*  Intro Section */
+
+  .intro-section {
+    grid-area: intro-section;
+    display: grid;
+    align-items: center;
+  }
+
+  .intro-title {
+    color: var(--very-dark-magenta);
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .intro-text {
+    color: var(--dark-grayish-magenta);
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  /* Reviews Section */
+  .reviews-section {
+    display: grid;
+    align-content: center;
+    gap: 20px;
+  }
+
+  .review {
+    background-color: var(--light--grayish-magenta);
+    height: 80px;
+    width: 100%;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    border-radius: 10px;
+  }
+
+  .review p {
+    color: var(--very-dark-magenta);
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .star {
+    margin-right: 8px;
+  }
+
+  /* Reviews Positioning */
+
+  .review:nth-child(1) {
+    margin-top: 0px;
+    /* margin-right: 80px; */
+  }
+  .review:nth-child(2) {
+    margin-top: 0px;
+    /* margin-right: 40px; */
+  }
+  .review:nth-child(3) {
+    margin-top: 0px;
+  }
+
+  .card-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+}
