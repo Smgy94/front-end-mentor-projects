@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+  --circle-grey: hsla(217, 12%, 43%, 0.5);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  color: var(--Medium-Grey);
+}
+
+/* Grid Container */
+.grid-container {
+  background-color: var(--Very-Dark-Blue);
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Card Container */
+.card {
+  background-color: var(--Dark-Blue);
+  border-radius: 2rem;
+  height: 50vh;
+  width: 25vw;
+  padding: 2.5rem;
+}
+/* Card Title */
+h2 {
+  color: var(--White);
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+/* Card Text */
+p {
+  line-height: 1.8;
+  width: 100%;
+}
+
+/* Icon */
+.icon {
+  background-color: var(--circle-grey);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Ratings */
+.rating {
+  margin: 1.5rem 0;
+}
+
+a {
+  color: var(--Medium-Grey);
+}
+
+.rating ul {
+  display: flex;
+  justify-content: space-between;
+}
+/* Rating Numbers */
+.rating li a {
+  font-size: 18px;
+  background-color: var(--circle-grey);
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* Rating Numbers On Hover */
+
+.rating a:visited {
+  background-color: var(--Medium-Grey);
+}
+
+.rating a:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+  transition: 0.2s;
+}
+
+/* Submit Button */
+button {
+  border: 0;
+  border-radius: 20px;
+  color: var(--White);
+  background-color: var(--Orange);
+  padding: 0.7rem;
+  width: 100%;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Submit Button On Hover */
+button:hover {
+  color: var(--Orange);
+  background-color: var(--White);
+  transition: 0.2s;
+  cursor: pointer;
+}
