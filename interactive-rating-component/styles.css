@@ -71,33 +71,33 @@ a {
   color: var(--Medium-Grey);
 }
 
-.rating ul {
+.rating {
   display: flex;
   justify-content: space-between;
 }
-/* Rating Numbers */
-.rating li a {
-  font-size: 18px;
-  background-color: var(--circle-grey);
-  height: 1.5rem;
-  width: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
   display: flex;
+  justify-content: center;
+  background-color: var(--circle-grey);
+  padding: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
 }
 
-/* Rating Numbers On Hover */
-
-.rating a:visited {
-  background-color: var(--Medium-Grey);
-}
-
-.rating a:hover {
+label:hover {
   background-color: var(--Orange);
   color: var(--White);
-  transition: 0.2s;
+}
+
+input:checked + label {
+  background-color: var(--Light-Grey);
+  color: var(--White);
 }
 
 /* Submit Button */
