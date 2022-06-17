@@ -121,3 +121,25 @@ button:hover {
   transition: 0.2s;
   cursor: pointer;
 }
+
+/* Mobile Layout */
+
+@media (max-width: 400px) {
+  /* Grid Container */
+  .grid-container {
+    background-color: var(--Very-Dark-Blue);
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* Card Container */
+  .card {
+    background-color: var(--Dark-Blue);
+    border-radius: 2rem;
+    height: 55vh;
+    width: 90vw;
+    padding: 2.5rem;
+  }
+}
