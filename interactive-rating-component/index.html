@@ -12,9 +12,12 @@
 </head>
 <body>
 
-  <!-- Rating state start -->
+  <!-- Rating page start -->
 <main class="grid-container">
   <div class="card">
+    <div onclick="show_hide_card_1()" id="card-1">
+  
+    <div class="how-did-we-do-page">
     <img src="./images/icon-star.svg" alt="icon of star" class="icon">
     <h2>How did we do?</h2>
     <p>Please let us know how we did with your support request. All feedback is appreciated
@@ -37,17 +40,31 @@
       <input type="radio" name="rating" id="5">
       <label for="5">5</label>
     </form>
+
+  <button class="btn">
+    <p>Submit</p>
+  </button>
+  </div>
+</div>
  
+  <!-- Thank You Page Start -->
+  <div onclick="show_hide_card_2()" id="card-2">
+    <div class="thank-you-page">
+    <img src="./images/illustration-thank-you.svg" alt="" class="thank-you-page-image">
 
-    <img src="./images/illustration-thank-you.svg" alt="" class="thank-you-page">
+    <div class="selected-score">
+      <p>You selected X out of 5</p>
+    </div>
 
-<button>
-  <p>Submit</p>
-</button>
+    <h2>Thank You!</h2>
 
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch</p>
+    </div>
+
+  </div>
   </div>
 </main>
 
-
+<script src="./app.js"></script>
 </body>
 </html>

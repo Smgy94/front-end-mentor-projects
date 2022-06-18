@@ -102,7 +102,7 @@ input:checked + label {
 }
 
 /* Submit Button */
-button {
+.btn {
   border: 0;
   border-radius: 20px;
   color: var(--White);
@@ -115,15 +115,39 @@ button {
 }
 
 /* Submit Button On Hover */
-button:hover {
+.btn:hover {
   color: var(--Orange);
   background-color: var(--White);
   transition: 0.2s;
   cursor: pointer;
 }
 
-/* Mobile Layout */
+/* Thank You Page */
+.thank-you-page {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
 
+.thank-you-page-image {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.selected-score {
+  background-color: var(--circle-grey);
+  color: var(--Orange);
+  width: 70%;
+  margin: 2rem auto;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+/* Mobile Layout */
 @media (max-width: 400px) {
   /* Grid Container */
   .grid-container {
@@ -143,3 +167,12 @@ button:hover {
     padding: 2.5rem;
   }
 }
+
+/* Javascript */
+/* .how-did-we-do-page {
+  display: none;
+}
+
+.thank-you-page {
+  display: none;
+} */
