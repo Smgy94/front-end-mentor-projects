@@ -20,7 +20,7 @@ function show_hide_card_2() {
     }
 
     else {
-        document.getElementById("card-2").style.display="none";
+        document.getElementById("card-2").style.display="block";
         return thank_you_page=1;
     }
 }

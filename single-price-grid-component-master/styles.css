@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Cyan-Lighter: hsla(179, 62%, 43%, 0.793);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--Grayish-Blue);
+  line-height: 1.5;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 40vw;
+  height: 500px;
+  background-color: white;
+  display: grid;
+  border-radius: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "section-1 section-1"
+    "section-2 section-3";
+}
+
+.section-1,
+.section-2,
+.section-3 {
+  padding: 2rem;
+}
+
+.section-1 {
+  grid-area: section-1;
+  align-self: center;
+}
+.section-2 {
+  grid-area: section-2;
+  background-color: var(--Cyan);
+  display: flex;
+  gap: 05px;
+  flex-direction: column;
+  border-radius: 0px 0px 0px 10px;
+  align-content: center;
+}
+.section-3 {
+  grid-area: section-3;
+  background-color: var(--Cyan-Lighter);
+  display: flex;
+  gap: 05px;
+  flex-direction: column;
+  border-radius: 0px 0px 10px 0px;
+  align-content: center;
+}
+
+/* Section-1 Styling */
+.intro-title {
+  color: var(--Cyan);
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.intro-subtitle {
+  color: var(--Bright-Yellow);
+  margin-bottom: 10px;
+}
+
+.section-1 p {
+  color: var(--Grayish-Blue);
+}
+
+.section-1 p {
+  width: 90%;
+}
+
+h2 {
+  color: var(--Light-Gray);
+  font-size: 20px;
+}
+
+p {
+  color: var(--Light-Gray);
+}
+/* Section-2 & Sectopn 3 Styling */
+.section-2 h3 {
+  color: var(--Light-Gray);
+  font-size: 35px;
+}
+.section-3 p {
+  color: rgba(246, 241, 241, 0.8);
+  width: 80%;
+}
+
+span {
+  color: lightgray;
+  font-size: 16px;
+}
+
+button {
+  border: 0;
+  margin-top: 20px;
+  background-color: var(--Bright-Yellow);
+  padding: 15px 10px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Layout */
+@media (max-width: 700px) {
+  body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .card {
+    width: 90vw;
+    height: 100vh;
+
+    background-color: white;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "section-1"
+      "section-2"
+      "section-3";
+  }
+  .section-2 {
+    border-radius: 0px 0px 0px 0px;
+  }
+}
