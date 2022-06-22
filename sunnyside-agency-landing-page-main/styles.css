@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif;
+}
+
+p,
+ul,
+li,
+a {
+  font-family: "Barlow", sans-serif;
+}
+
+:root {
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --Dark-blue: hsl(198, 62%, 26%);
+  --Dark-moderate-cyan: hsl(168, 34%, 41%);
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Header */
+.header {
+  background-color: rgb(0, 140, 255);
+  background-image: url(./images/desktop/image-header.jpg);
+  height: 100vh;
+  background-size: contain;
+}
+
+/* Navbar */
+.nav {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 5rem;
+}
+
+a {
+  color: whitesmoke;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li {
+  margin-left: 3rem;
+}
+
+/* Contact Button Styles */
+.contact-btn {
+  background-color: var(--White);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.contact-btn:hover {
+  background-color: rgba(255, 255, 255, 0.464);
+  color: white;
+  transition: 0.2s;
+}
+
+/* Intro Title */
+.intro-title {
+  font-size: 65px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  top: 100px;
+  position: relative;
+  color: whitesmoke;
+}
+
+.burger-icon {
+  display: none;
+}
+
+.arrow {
+  position: relative;
+  left: 48.5%;
+  top: 25%;
+}
+
+/* Grid Container Split Card  */
+.grid-container-split-card {
+  display: grid;
+  grid-template-areas:
+    "split-card-1-left split-card-1-right"
+    "split-card-2-left split-card-2-right"
+    "split-card-3-left split-card-3-right";
+}
+
+/* Split Card Layout */
+.split-card {
+  height: 700px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+/* Transform Your Brand Text */
+.split-card-1-left {
+  grid-area: split-card-1-left;
+}
+/* Transform Your Brand Image */
+.split-card-1-right {
+  grid-area: split-card-1-right;
+  background-image: url(./images/desktop/image-transform.jpg);
+}
+/* Stand out to the right audience image */
+.split-card-2-left {
+  grid-area: split-card-2-left;
+  background-image: url(./images/desktop/image-stand-out.jpg);
+}
+/* Stand out to the right audience text */
+.split-card-2-right {
+  grid-area: split-card-2-right;
+}
+/* Graphic Design Image */
+.split-card-3-left {
+  grid-area: split-card-3-left;
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Photography Image */
+.split-card-3-right {
+  grid-area: split-card-3-right;
+  background-image: url(./images/desktop/image-photography.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Split Card Text Styling */
+.split-card h2 {
+  font-size: 50px;
+  width: 60%;
+  margin: 1rem 0;
+}
+.split-card p {
+  width: 60%;
+  line-height: 2;
+  color: var(--Grayish-blue);
+}
+
+.split-card .learn-more {
+  color: black;
+  margin: 1rem 0;
+  font-family: "Fraunces", serif;
+}
+/* Learn More */
+.split-card .learn-more::before {
+  background-color: var(--Yellow);
+  content: "";
+  display: block;
+  position: relative;
+  top: 2rem;
+  height: 13px;
+  width: 7rem;
+  border-radius: 15px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.split-card .learn-more:hover::before {
+  opacity: 0.5;
+  background-color: var(--Yellow);
+}
+
+.split-card .learn-more .red::before {
+  background-color: var(--Soft-red);
+  content: "";
+  display: block;
+  position: relative;
+  top: 2rem;
+  right: 0.5rem;
+  height: 33px;
+  width: 7rem;
+  border-radius: 15px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.learn-more .red:hover::before {
+  opacity: 0.5;
+  background-color: var(--Soft-red);
+}
+
+.learn-more {
+  text-transform: uppercase;
+}
+
+/* Graphic Design & Photography Text */
+.split-card h3 {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.697);
+  width: 60%;
+  text-align: center;
+}
+
+.split-card .btm-card-p {
+  color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Testimonials */
+
+/* Title */
+.testimonials-title {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--Grayish-blue);
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.testimonials-grid-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: rgb(255, 255, 255);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 360px));
+  gap: 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  line-height: 1.5;
+  color: var(--Dark-grayish-blue);
+}
+
+.card img {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+
+.job-title {
+  bottom: 0px;
+  position: relative;
+}
+
+.job-title h3 {
+  color: black;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.milk-bottles {
+  background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.orange {
+  background-image: url(./images/desktop/image-gallery-orange.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.cone {
+  background-image: url(./images/desktop/image-gallery-cone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.sugar-cube {
+  background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--Dark-moderate-cyan);
+  height: 40vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+  color: var(--Very-dark-desaturated-blue);
+}
+.footer-links a {
+  width: 25rem;
+  color: var(--Very-dark-desaturated-blue);
+}
+.footer-links a:hover {
+  color: var(--White);
+}
+.footer-links ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-socials {
+  display: flex;
+  width: 25rem;
+  justify-content: center;
+  gap: 2.5rem;
+  height: 1.5rem;
+}
+
+.icon-facebook:hover {
+  fill: red;
+}
+svg:hover {
+  fill: red;
+}
+
+/* Mobile View */
+@media (max-width: 500px) {
+  .grid-container-split-card {
+    /* background-color: palegreen; */
+    grid-template-areas:
+      "split-card-1-right"
+      "split-card-1-left"
+      "split-card-2-left "
+      "split-card-2-right"
+      "split-card-3-left"
+      "split-card-3-right";
+  }
+  .header {
+    background-color: rgb(0, 140, 255);
+    background-image: url(./images/desktop/image-header.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  /* Navbar */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0rem;
+    margin: 0rem;
+  }
+
+  .logo {
+    top: 2rem;
+    left: 2rem;
+    position: absolute;
+  }
+
+  a {
+    color: var(--Grayish-blue);
+    font-size: 18px;
+  }
+
+  .nav-menu {
+    background-color: white;
+    visibility: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem;
+    gap: 3rem;
+    text-align: center;
+    width: 90vw;
+    height: 42vh;
+    position: relative;
+    top: 120px;
+    z-index: 100;
+  }
+  .nav-menu.active {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem;
+    gap: 3rem;
+    text-align: center;
+    width: 90vw;
+    height: 42vh;
+    position: relative;
+    top: 120px;
+    z-index: 100;
+  }
+
+  .burger-icon {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+    display: block;
+  }
+
+  .nav li {
+    margin-left: 0rem;
+  }
+
+  /* Contact Button Styles */
+  .contact-btn {
+    background-color: var(--Yellow);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  .contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.464);
+    color: white;
+    transition: 0.2s;
+  }
+
+  /* Intro Title */
+  .intro-title {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    top: 15vh;
+    position: absolute;
+    color: whitesmoke;
+  }
+
+  .arrow {
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    transform: scale(1.3);
+  }
+  .split-card {
+    height: 350px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 0rem;
+  }
+  .split-card h2 {
+    font-size: 30px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .split-card p {
+    width: 85%;
+    line-height: 1.8;
+    text-align: center;
+    color: var(--Grayish-blue);
+  }
+
+  .split-card .learn-more::before {
+    background-color: var(--Yellow);
+    content: "";
+    display: block;
+    position: relative;
+    top: 2rem;
+    right: -6.5rem;
+    height: 13px;
+    width: 7rem;
+    border-radius: 15px;
+    opacity: 0.2;
+    cursor: pointer;
+  }
+  .split-card-3-left {
+    height: 600px;
+  }
+
+  .split-card-3-left h3 {
+    margin-bottom: 2rem;
+  }
+  .split-card-3-right h3 {
+    margin-bottom: 2rem;
+  }
+  .split-card-3-right {
+    height: 600px;
+  }
+
+  .split-card .btm-card-p {
+    color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .split-card-3-left {
+    grid-area: split-card-3-left;
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .split-card-3-right {
+    grid-area: split-card-3-right;
+    background-image: url(./images/desktop/image-photography.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Client Testimonials */
+  .testimonials-title {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--Grayish-blue);
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .testimonials-grid-container {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    gap: 5rem;
+    margin-bottom: 8rem;
+  }
+
+  .card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    line-height: 1.5;
+    color: var(--Dark-grayish-blue);
+  }
+  /* Gallery Grid */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  footer {
+    background-color: var(--Dark-moderate-cyan);
+    height: 40vh;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 2.5rem;
+    color: var(--Very-dark-desaturated-blue);
+  }
+  .footer-links {
+    width: 18rem;
+    color: var(--Very-dark-desaturated-blue);
+  }
+  .footer-links ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-socials {
+    display: flex;
+    width: 25rem;
+    justify-content: center;
+    gap: 2.5rem;
+    height: 1.5rem;
+  }
+}
