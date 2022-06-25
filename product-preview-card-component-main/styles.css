@@ -33,6 +33,7 @@ img {
 }
 
 .card {
+  max-width: 850px;
   height: 60vh;
   width: 45vw;
   background-color: white;
