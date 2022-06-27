@@ -16,6 +16,7 @@
 body {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
+  line-height: 1.5;
 }
 img {
   object-fit: cover;
@@ -36,30 +37,208 @@ img {
 }
 
 .card {
+  max-width: 800px;
+  max-height: 400px;
   background-color: white;
-  width: 800px;
-  height: 300px;
+  width: 45vw;
+  height: 35vh;
   display: grid;
   grid-template-columns: 305px 1.5fr;
   border-radius: 20px;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.238);
 }
-
+/* Drawers Image */
 .card-left-image {
   background-image: url(./images/drawers.jpg);
   background-size: cover;
   border-radius: 20px 0 0 20px;
+  height: 35vh;
+  max-height: 400px;
 }
 
+/* Card Text Content */
 .card-right-text {
   padding: 2rem;
   display: grid;
+  gap: 1rem;
   align-items: center;
 }
 
-/*Icon IMages */
+/*Icon Images */
 .icon-michelle,
 .icon-share {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+/* Intro Title */
+.card-title {
+  color: var(--Very-Dark-Grayish-Blue);
+  width: 90%;
+}
+
+.card-text {
+  color: var(--Grayish-Blue);
+  width: 90%;
+}
+
+/* Michelle Section */
+.michelle-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Icon Share */
+.icon-share {
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/icon-share.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--Light-Grayish-Blue);
+  padding: 1rem;
+}
+
+.name {
+  position: relative;
+  left: -50px;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.name p {
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.share-menu {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  color: var(--Light-Grayish-Blue);
+  width: 15rem;
+  height: 3rem;
+  display: flex;
+  align-content: center;
+  position: absolute;
+  left: 62vw;
+  top: 53vh;
+  border-radius: 10px;
+  display: none;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 100%;
+  top: 12px;
+  position: relative;
+}
+
+.icons p {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--Grayish-Blue);
+}
+
+.facebook,
+.twitter,
+.pinterest {
+  height: 20px;
+  width: 20px;
+}
+
+/* Mobile View */
+
+@media (max-width: 500px) {
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--Light-Grayish-Blue);
+  }
+  .card {
+    max-width: 800px;
+    max-height: 550px;
+    width: 90vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+  /* Drawers Image */
+  .card-left-image {
+    background-image: url(./images/drawers.jpg);
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+    height: 25vh;
+  }
+
+  /* Card Text Content */
+  .card-right-text {
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    height: 300px;
+  }
+
+  /*Icon Images */
+  .icon-michelle,
+  .icon-share {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  button {
+    border-radius: 200px;
+  }
+
+  /* Intro Title */
+  .card-title {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 16px;
+    margin-top: -30px;
+    width: 95%;
+  }
+
+  .card-text {
+    color: var(--Grayish-Blue);
+    font-size: 14px;
+    width: 95%;
+  }
+
+  /* Michelle Section */
+  .michelle-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+
+  /* Icon Share */
+  .icon-share {
+    width: 20px;
+    height: 20px;
+    background-image: url(./images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--Light-Grayish-Blue);
+    padding: 1rem;
+  }
+
+  .name {
+    position: relative;
+    left: -10px;
+    color: var(--Very-Dark-Grayish-Blue);
+  }
+
+  .name p {
+    color: var(--Desaturated-Dark-Blue);
+  }
 }
