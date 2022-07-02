@@ -113,6 +113,10 @@ img {
   color: var(--Desaturated-Dark-Blue);
 }
 
+button {
+  border-radius: 50%;
+  cursor: pointer;
+}
 .share-menu {
   background-color: var(--Very-Dark-Grayish-Blue);
   color: var(--Light-Grayish-Blue);
@@ -193,10 +197,6 @@ img {
     border-radius: 50px;
   }
 
-  button {
-    border-radius: 200px;
-  }
-
   /* Intro Title */
   .card-title {
     color: var(--Very-Dark-Grayish-Blue);
@@ -229,6 +229,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
     padding: 1rem;
   }
 
