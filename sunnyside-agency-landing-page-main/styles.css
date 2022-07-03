@@ -405,8 +405,8 @@ svg:hover {
 
   .nav-menu {
     background-color: white;
-    visibility: hidden;
-    display: none;
+    visibility:visible
+    display: block;
     flex-direction: column;
     justify-content: center;
     padding: 0rem;

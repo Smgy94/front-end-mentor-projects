@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/* Wrapper Grid Container */
+.wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  margin-top: 5rem;
+}
+
+/* Intro Text */
+.title {
+  margin: 2rem 0 1rem 0;
+  font-size: 3rem;
+  font-weight: 100;
+  color: var(--Very-Dark-Blue);
+}
+
+.title span {
+  font-weight: 1000;
+  color: var(--Very-Dark-Blue);
+}
+
+.subtitle {
+  color: var(--Very-Dark-Blue);
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+/* Input Box */
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  border: 0;
+  width: 400px;
+  height: 10px;
+  padding: 20px;
+  border: 1px solid var(--Gray);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+#text {
+  position: relative;
+  top: 35px;
+  right: 400px;
+}
+
+/* Button  */
+.btn {
+  background-color: var(--Blue);
+  color: #fff;
+  padding: 0.9rem 3.5rem;
+  border-radius: 30px;
+  border: 0;
+}
+
+/* Illustration */
+.illustration {
+  max-width: 50vw;
+  margin-top: 80px;
+}
+
+/* Social Media Icons */
+i {
+  font-size: 2rem;
+  color: var(--Blue);
+}
